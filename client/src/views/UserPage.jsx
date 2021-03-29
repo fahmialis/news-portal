@@ -42,7 +42,7 @@ export default class UserPage extends Component {
     return (
       <div>
         {/* <button onClick={this.showUser}>click</button> */}
-        <table className="table table-hover">
+        <table className="table table-hover table-borderless table-sm">
           <thead className="thead-light">
             <tr>
               <th scope="col">Name</th>
@@ -50,6 +50,7 @@ export default class UserPage extends Component {
               <th scope="col">Email</th>
               <th scope="col">Phone</th>
               <th scope="col">Website</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
