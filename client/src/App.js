@@ -1,20 +1,23 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import UserPage from './components/UserPage.jsx'
-import Navbar from './components/NavBar'
+import UserPage from './views/UserPage.jsx'
+import Navbar from './components/Navbar'
+import React from 'react';
 
-function App() {
-  return (
+class App extends React.Component {
+  render() {
+    return(
     <div className="App">
       <header className="App-header">
         <Navbar></Navbar>
       </header>
-      <hr></hr>
-      <body>
+      <div>
       <UserPage></UserPage>
-      </body>
+      </div>
     </div>
-  );
+    )
+  }
+
 }
 
 export default App;
