@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import UserCard from './components/UserCard.jsx'
+import UserPage from './components/UserPage.jsx'
 import Navbar from './components/NavBar'
 
 function App() {
@@ -8,15 +8,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Navbar></Navbar>
-      <div className="container-fluid row justify-content-center">
-        <UserCard></UserCard>
-        <UserCard></UserCard>
-        <UserCard></UserCard>
-        <UserCard></UserCard>
-        <UserCard></UserCard>
-        <UserCard></UserCard>
-      </div>
       </header>
+      <hr></hr>
+      <body>
+      <UserPage></UserPage>
+      </body>
     </div>
   );
 }
