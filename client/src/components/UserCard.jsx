@@ -1,24 +1,24 @@
-import React from 'react'
 import {Button} from 'react-bootstrap'
+import React, {useState, useEffect} from 'react'
 
-class Card extends React.Component {
-  constructor(props){
-    super(props)
-  }
-  render() {
-    const {user} = this.props
+function Card (props) {
+    const [user, setUser] = useState(props)
     // console.log(user, 'ini user');
+    useEffect(() => {
+      console.log(props, 'ini props')
+      console.log(user,'ini user')
+    },[])
     return (
       <tr>
-        <th scope="row">{user.name}</th>
-        <td>{user.username}</td>
-        <td>{user.email}</td>
-        <td>{user.phone}</td>
-        <td>{user.website}</td>
-        <td><Button>view detail</Button></td>
+        <th scope="row">{user.user.name}</th>
+        <td>{user.user.username}</td>
+        <td>{user.user.email}</td>
+        <td>{user.user.phone}</td>
+        <td>{user.user.website}</td>
+        <td><Button>Detail</Button></td>
       </tr>
     )
-  }
 }
+
 
 export default Card
