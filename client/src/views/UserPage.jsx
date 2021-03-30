@@ -1,4 +1,3 @@
-
 import React, {useState, useEffect} from 'react'
 import UserCard from '../components/UserCard'
 
@@ -23,6 +22,7 @@ function UserPage () {
 
   return (
     <div>
+      <h1>editor list</h1>
       <table className="table table-hover table-borderless table-sm">
         <thead className="thead-light">
           <tr>
