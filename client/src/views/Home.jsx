@@ -38,13 +38,20 @@ export default function Home() {
       </div>
       <div className="row">
       <div className="col-lg-9 col-sm-9" style={{paddingLeft: 40}}>
-        <h2>Simple web description</h2>
-        <h4 style={{textAlign:'justify'}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam dicta atque ut dolore reiciendis quibusdam, iste magni laudantium quod, neque animi sed ipsum aliquid minima soluta aut, facere tempora consequuntur? Cumque saepe distinctio, nulla culpa debitis accusamus id error laborum exercitationem libero consequuntur impedit quis aspernatur labore voluptatibus quasi? Accusantium?</h4>
-
-        <h4 style={{textAlign:'justify'}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, nostrum incidunt, dolorum minus numquam ullam tenetur reprehenderit eius ut doloribus accusamus laboriosam culpa molestias? Saepe?</h4>
+        <h2>EDITOR'S PICK</h2>
+        {
+          loading ? <ClipLoader/> :
+            <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+              <img src="https://images.wsj.net/im-317756/social" className="d-block w-100" alt="Editor's pick"/>
+              <div className="carousel-caption d-none d-md-block" style={{color:'white'}}>
+                <h5><b>WSJ News Exclusive | Florida Investor Commits $100 Million Toward Potential Bid for Tribune Publishing</b></h5>
+                <p>A Florida investor has expressed interest in joining an 11th-hour effort by a Maryland hotel magnate to acquire Tribune Publishing Co. and wrest the company away from hedge fund Alden Global Capital, LLC.(wsj.com)</p>
+              </div>
+            </div>
+        }
       </div>
       <div className="col-lg-3 col-sm-3" style={{padding: 0, margin: 0}}>
-        <h5 style={{textAlign :'center'}}><b>MOST POPULAR NEWS</b></h5>
+        <h5 style={{textAlign :'center', marginBottom: 21}}><b>MOST POPULAR NEWS</b></h5>
         <div className="container-fluid row justify-content-center overflow-auto" style={{padding: 0, margin: 0, backgroundColor:'light-gray', height: 600}}>
         {
           loading ? <ClipLoader/> :

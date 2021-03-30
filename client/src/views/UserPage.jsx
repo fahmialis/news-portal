@@ -22,17 +22,15 @@ function UserPage () {
 
   return (
     <div>
-      <div className="jumbotron" style={{background : 'none'}}>
+      <div className="jumbotron" style={{background : 'none', marginBottom: 0}}>
         <h1 className="display-4">Our supporter!</h1>
         <h2 className="lead">Thanks to our supporter we can keep our website running.</h2> 
       </div>
-      <table className="table table-hover" style={{backgroundColor: 'lightblue'}}>
+      <table className="table table-hover" >
         <thead className="thead-light">
           <tr>
             <th scope="col">Name</th>
             <th scope="col">Username</th>
-            <th scope="col">Email</th>
-            <th scope="col">Phone</th>
             <th scope="col">Website</th>
             <th scope="col">Action</th>
           </tr>
