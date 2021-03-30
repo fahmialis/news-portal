@@ -9,14 +9,14 @@ function UserPage () {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
       .then(data => {
-        console.log(data,'fetch data')
+        // console.log(data,'fetch data')
         setUsers(data)
       })
       .catch(err => {
         console.log(err);
       })
       .finally(_ => {
-      console.log(users, 'ini users finallyy');
+      // console.log(users, 'ini users finallyy');
       }) 
   }, [])
 

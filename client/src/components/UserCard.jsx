@@ -5,8 +5,8 @@ function Card (props) {
     const [user, setUser] = useState(props)
     // console.log(user, 'ini user');
     useEffect(() => {
-      console.log(props, 'ini props')
-      console.log(user,'ini user')
+      // console.log(props, 'ini props')
+      // console.log(user,'ini user')
     },[])
     return (
       <tr>
