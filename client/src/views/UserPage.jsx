@@ -24,8 +24,9 @@ function UserPage () {
     <div>
       <div className="jumbotron" style={{background : 'none'}}>
         <h1 className="display-4">Our supporter!</h1>
+        <h2 className="lead">Thanks to our supporter we can keep our website running.</h2> 
       </div>
-      <table className="table table-hover table-borderless table-sm">
+      <table className="table table-hover" style={{backgroundColor: 'lightblue'}}>
         <thead className="thead-light">
           <tr>
             <th scope="col">Name</th>
