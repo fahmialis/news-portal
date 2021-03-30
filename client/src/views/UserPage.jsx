@@ -22,7 +22,9 @@ function UserPage () {
 
   return (
     <div>
-      <h1>editor list</h1>
+      <div className="jumbotron" style={{background : 'none'}}>
+        <h1 className="display-4">Our supporter!</h1>
+      </div>
       <table className="table table-hover table-borderless table-sm">
         <thead className="thead-light">
           <tr>

@@ -9,11 +9,11 @@ function App () {
   return(
   <div className="App">
     <header className="App-header">
-      {/* <Navbar></Navbar> */}
+      <Navbar></Navbar>
     </header>
     <body>
     <Home></Home>
-    {/* <UserPage></UserPage> */}
+    <UserPage></UserPage>
     </body>
   </div>
   )

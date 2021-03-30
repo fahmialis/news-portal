@@ -4,7 +4,7 @@ export default function newsCard(props) {
   const [news,setNews] = useState(props)
   // console.log(news,'news');
   return (
-    <div className="card mb-3" style={{width: "25rem", color: "black", textAlign: 'justify'}}>
+    <div className="card mb-3" style={{width: "20rem", color: "black", textAlign: 'justify'}}>
       <img className="card-img-top" src={news.news.urlToImage} alt="News image"/>
       <div className="card-body">
         <h6 className="card-title" style={{fontSize: 12}}>{news.news.title}</h6>

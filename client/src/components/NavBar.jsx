@@ -12,9 +12,6 @@ export default class NavBar extends Component {
               <li className="nav-item rounded">
                 <a className="nav-link active" href="#" ><i className="bi bi-house-fill me-2"></i>User List</a>
               </li>
-              <li className="nav-item rounded">
-                <a className="nav-link active" href="#" ><i className="bi bi-house-fill me-2"></i>Logout</a>
-              </li>
             </ul>
           </div>
         </div>
