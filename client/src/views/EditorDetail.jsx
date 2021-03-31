@@ -29,6 +29,7 @@ export default function EditorDetail() {
 
   return (
     <div className="mt-5">
+      <br/>
       <div className="jumbotron" style={{background : 'none', marginBottom: 0, paddingBottom: 32 }}>
         <h1 className="display-4">Hello!</h1>
           <h2 className="lead">Learn more about {user.name}.</h2> 

@@ -7,6 +7,7 @@ import {addNews} from '../store/actions'
 
 export default function Home() {
   const news = useSelector(state => state.news)
+
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const dispatch = useDispatch()
@@ -26,6 +27,8 @@ export default function Home() {
         setLoading(false)
       })
   }, [])
+
+
   
   if(error) {
     return <h2>error</h2>

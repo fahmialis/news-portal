@@ -30,6 +30,7 @@ function UserPage () {
 
   return (
     <div>
+      <br/>
       <div className="jumbotron" style={{background : 'none', marginBottom: 0}}>
         <h1 className="display-4">About Us</h1>
         <h2 className="lead">We are a small team, click detail to know more about our editor</h2> 

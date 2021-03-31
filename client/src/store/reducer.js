@@ -15,8 +15,8 @@ function reducer(state = initialState, action) {
     // console.log(payload, 'editor reducer');
     return {...state, editors: payload}
   } else if (type === 'favourites/addFavourites'){
-    console.log(payload, 'fav reducer');
-    return {...state, favourites: payload}
+    // console.log(payload, 'fav reducer');
+    return {...state, favourites: state.favourites.concat(payload)}
 
   }
   return state
