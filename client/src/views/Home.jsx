@@ -36,6 +36,7 @@ export default function Home() {
 
   return (
     <div>
+      <br/>
       <div className="jumbotron" style={{background : 'none'}}>
         <h1 className="display-4">Hello!</h1>
           <h2 className="lead">This is a simple website for showing news from multiple online API.</h2> 
