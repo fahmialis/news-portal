@@ -12,7 +12,7 @@ import {
 } from "react-router-dom"
 
 function Card (props) {
-    const [user, setUser] = useState(props)
+    const [editor, setUser] = useState(props)
     const history = useHistory()
     // console.log(user, 'ini user');
     useEffect(() => {
@@ -29,12 +29,12 @@ function Card (props) {
       <Router>
 
       <tr>
-        <th scope="row">{user.user.name}</th>
-        <td>{user.user.username}</td>
-        <td>{user.user.website}</td>
+        <th scope="row">{editor.editor.name}</th>
+        <td>{editor.editor.username}</td>
+        <td>{editor.editor.website}</td>
         {
         <td><Button onClick={() =>{
-          toDetail(user.user.id)
+          toDetail(editor.editor.id)
         }}>Detail</Button></td>
         }
       </tr>

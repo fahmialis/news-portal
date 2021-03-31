@@ -1,10 +1,14 @@
 import React, {useState, useEffect} from 'react'
 import UserCard from '../components/UserCard'
+import {addEditors} from '../store/actions'
+import {useSelector, useDispatch} from 'react-redux'
 
 function UserPage () {
-  const [users, setUsers] = useState([])
+  const editors = useSelector(state => state.editors)
+  // const [users, setUsers] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
+  const dispatch = useDispatch()
 
   useEffect(() => {
     setLoading(true)
@@ -12,13 +16,13 @@ function UserPage () {
       .then(response => response.json())
       .then(data => {
         // console.log(data,'fetch data')
-        setUsers(data)
+        dispatch(addEditors(data))
       })
       .catch(err => {
         console.log(err);
       })
       .finally(_ => {
-      // console.log(users, 'ini users finallyy');
+      console.log(editors, 'ini editors finallyy');
       setLoading(false)
       }) 
   }, [])
@@ -42,8 +46,8 @@ function UserPage () {
         </thead>
         <tbody>
           {
-            users.map(user =>{
-              return <UserCard user={user} key={user.id}></UserCard>
+            editors.map(editor =>{
+              return <UserCard editor={editor} key={editor.id}></UserCard>
             })
           }
         </tbody>
