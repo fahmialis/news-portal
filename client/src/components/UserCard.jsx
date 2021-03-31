@@ -1,5 +1,6 @@
 import {Button} from 'react-bootstrap'
 import React, {useState, useEffect} from 'react'
+import EditorDetail from '../views/EditorDetail'
 
 function Card (props) {
     const [user, setUser] = useState(props)
