@@ -22,7 +22,7 @@ export default function Home() {
         console.log(err);
       })
       .finally(_ => {
-        console.log(news, 'ini news')
+        // console.log(news, 'ini news')
         setLoading(false)
       })
   }, [])

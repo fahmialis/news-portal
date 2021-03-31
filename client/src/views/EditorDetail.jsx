@@ -29,9 +29,13 @@ export default function EditorDetail() {
 
   return (
     <div className="mt-5">
+      <div className="jumbotron" style={{background : 'none', marginBottom: 0, paddingBottom: 32 }}>
+        <h1 className="display-4">Hello!</h1>
+          <h2 className="lead">Learn more about {user.name}.</h2> 
+      </div>
     {
       loading ? <ClipLoader/> :
-      <div className="row py-5 px-4">
+      <div className="row py-5 px-4" style={{margin: 0}}>
         <div className="col-md-5 mx-auto">
             {/* <!-- Profile widget --> */}
             <div className="bg-white shadow rounded overflow-hidden">
@@ -53,15 +57,15 @@ export default function EditorDetail() {
                         <p className="font-italic mb-0"><b>Website</b> : {user.website}</p>
                     </div>
                 </div>
-                <div class="py-4 px-4">
-                <div class="d-flex align-items-center justify-content-between mb-3">
-                    <h5 class="mb-0">Recent photos I took :)</h5>
+                <div className="py-4 px-4">
+                <div className="d-flex align-items-center justify-content-between mb-3">
+                    <h5 className="mb-0">Recent photos I took :)</h5>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6 mb-2 pr-lg-1"><img src="https://picsum.photos/300/200?random=1" alt="" class="img-fluid rounded shadow-sm"/></div>
-                    <div class="col-lg-6 mb-2 pl-lg-1"><img src="https://picsum.photos/300/200?random=2" alt="" class="img-fluid rounded shadow-sm"/></div>
-                    <div class="col-lg-6 pr-lg-1 mb-2"><img src="https://picsum.photos/300/200?random=3" alt="" class="img-fluid rounded shadow-sm"/></div>
-                    <div class="col-lg-6 pl-lg-1"><img src="https://picsum.photos/300/200?random=4" alt="" class="img-fluid rounded shadow-sm"/></div>
+                <div className="row">
+                    <div className="col-lg-6 mb-2 pr-lg-1"><img src="https://picsum.photos/300/200?random=1" alt="my pic :)" className="img-fluid rounded shadow-sm"/></div>
+                    <div className="col-lg-6 mb-2 pl-lg-1"><img src="https://picsum.photos/300/200?random=2" alt="my pic :)" className="img-fluid rounded shadow-sm"/></div>
+                    <div className="col-lg-6 pr-lg-1 mb-2"><img src="https://picsum.photos/300/200?random=3" alt="my pic :)" className="img-fluid rounded shadow-sm"/></div>
+                    <div className="col-lg-6 pl-lg-1"><img src="https://picsum.photos/300/200?random=4" alt="my pic :)" className="img-fluid rounded shadow-sm"/></div>
                 </div>
             </div>
           </div>

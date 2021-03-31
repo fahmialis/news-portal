@@ -1,13 +1,7 @@
 import {Button} from 'react-bootstrap'
 import React, {useState, useEffect} from 'react'
-import EditorDetail from '../views/EditorDetail'
 
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
   useHistory
 } from "react-router-dom"
 
@@ -21,13 +15,11 @@ function Card (props) {
     },[])
 
     const toDetail = (id) => {
-      console.log(id, 'ini id user')
+      // console.log(id, 'ini id user')
       history.push(`editor/${id}`)
     }
 
     return (
-      <Router>
-
       <tr>
         <th scope="row">{editor.editor.name}</th>
         <td>{editor.editor.username}</td>
@@ -38,7 +30,6 @@ function Card (props) {
         }}>Detail</Button></td>
         }
       </tr>
-      </Router>
     )
 }
 

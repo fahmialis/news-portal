@@ -22,7 +22,7 @@ function UserPage () {
         console.log(err);
       })
       .finally(_ => {
-      console.log(editors, 'ini editors finallyy');
+      // console.log(editors, 'ini editors finallyy');
       setLoading(false)
       }) 
   }, [])
