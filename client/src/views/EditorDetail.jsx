@@ -37,19 +37,20 @@ export default function EditorDetail() {
             <div className="bg-white shadow rounded overflow-hidden">
                 <div className="px-4 pt-0 pb-4 cover" style={{backgroundColor: 'black'}}>
                     <div className="media align-items-end profile-head">
-                        <div className="profile mr-3"><img src="https://picsum.photos/200/200?random=5" alt="..." width="130" className="rounded mb-2 img-thumbnail"/></div>
+                        <div className="profile mr-3"><img src="https://picsum.photos/300/300?random=5" alt="..." width="130" className="rounded mb-2 img-thumbnail"/></div>
                         <div className="media-body mb-5 text-white">
+                            <br/><br/>
                             <h4 className="mt-0 mb-0">{user.name}</h4>
                             <p className=" mb-4"> <i className="fas fa-map-marker-alt mr-2"></i>Username : {user.username}</p>
                         </div>
                     </div>
                 </div>
                 <div className="px-4 py-3">
-                    <h5 className="mb-0">Contact me</h5>
+                    <h4 className="mb-0">Contact me</h4><br/>
                     <div className="p-4 rounded shadow-sm bg-light">
-                        <p className="font-italic mb-0">Email : {user.email}</p>
-                        <p className="font-italic mb-0">Phone : {user.phone}</p>
-                        <p className="font-italic mb-0">Website : {user.website}</p>
+                        <p className="font-italic mb-0"><b>Email </b>: {user.email}</p>
+                        <p className="font-italic mb-0"><b>Phone</b> : {user.phone}</p>
+                        <p className="font-italic mb-0"><b>Website</b> : {user.website}</p>
                     </div>
                 </div>
                 <div class="py-4 px-4">
@@ -63,11 +64,10 @@ export default function EditorDetail() {
                     <div class="col-lg-6 pl-lg-1"><img src="https://picsum.photos/300/200?random=4" alt="" class="img-fluid rounded shadow-sm"/></div>
                 </div>
             </div>
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
     }
-
     </div>
-)
+    )
 }
