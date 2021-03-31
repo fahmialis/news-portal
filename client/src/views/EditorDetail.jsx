@@ -28,8 +28,10 @@ export default function EditorDetail() {
   }, [])
 
   return (
-    <div>
+    <div className="mt-5">
       <h1>tes</h1>
+      <h2>{users.name}</h2>
+
     </div>
 )
 }
