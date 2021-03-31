@@ -3,8 +3,11 @@ import UserCard from '../components/UserCard'
 
 function UserPage () {
   const [users, setUsers] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
+    setLoading(true)
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
       .then(data => {
@@ -16,6 +19,7 @@ function UserPage () {
       })
       .finally(_ => {
       // console.log(users, 'ini users finallyy');
+      setLoading(false)
       }) 
   }, [])
 
@@ -24,8 +28,9 @@ function UserPage () {
     <div>
       <div className="jumbotron" style={{background : 'none', marginBottom: 0}}>
         <h1 className="display-4">About Us</h1>
-        <h2 className="lead">Describe about us</h2> 
+        <h2 className="lead">We are a small team, click detail to know more about our editor</h2> 
       </div>
+      <div className="container justify-content-center" >
       <table className="table table-hover table-sm" >
         <thead className="thead-light">
           <tr>
@@ -43,6 +48,7 @@ function UserPage () {
           }
         </tbody>
       </table>
+      </div>
     </div>
   )
 

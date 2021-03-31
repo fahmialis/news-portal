@@ -1,7 +1,8 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import About from './views/About.jsx'
-import Home from './views/Home'
+import Home from './views/Home.jsx'
+import Editor from './views/EditorDetail.jsx'
 import Navbar from './components/Navbar'
 import React from 'react';
 import {
@@ -22,16 +23,19 @@ function App () {
         <Link to="/about" className="navbar-brand">About Us</Link>
       </nav>
     </header>
-    <body>
+    <div className="body">
       <Switch>
         <Route path="/about">
           <About></About>
+        </Route>
+        <Route path="/editor/:id">
+          <Editor></Editor>
         </Route>
         <Route path="/">
           <Home></Home>
         </Route>
       </Switch>
-    </body>
+    </div>
   </div>
     </Router>
   )
