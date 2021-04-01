@@ -3,33 +3,18 @@ import NewsCard from '../components/newsCard'
 import ClipLoader from "react-spinners/ClipLoader"
 import { Carousel } from 'react-bootstrap'
 import {useSelector, useDispatch} from 'react-redux'
-import {addNews} from '../store/actions'
+import { addNewsAsync } from '../store/actions/news'
 
 export default function Home() {
   const news = useSelector(state => state.news)
-
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const dispatch = useDispatch()
 
   useEffect(() => {
-    setLoading(true)
-    fetch('https://newsapi.org/v2/everything?domains=wsj.com&apiKey=1a59ee3dcc8843718c9f4b3226d9f95e')
-      .then(res => res.json())
-      .then(data => {
-        dispatch(addNews(data))
-      })
-      .catch(err => {
-        console.log(err);
-      })
-      .finally(_ => {
-        // console.log(news, 'ini news')
-        setLoading(false)
-      })
+    dispatch(addNewsAsync())
   }, [])
 
-
-  
   if(error) {
     return <h2>error</h2>
   }

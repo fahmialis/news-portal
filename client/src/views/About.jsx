@@ -1,32 +1,17 @@
 import React, {useState, useEffect} from 'react'
 import UserCard from '../components/UserCard'
-import {addEditors} from '../store/actions'
 import {useSelector, useDispatch} from 'react-redux'
+import { addEditorsAsync } from '../store/actions/editors'
 
 function UserPage () {
   const editors = useSelector(state => state.editors)
-  // const [users, setUsers] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const dispatch = useDispatch()
 
   useEffect(() => {
-    setLoading(true)
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => response.json())
-      .then(data => {
-        // console.log(data,'fetch data')
-        dispatch(addEditors(data))
-      })
-      .catch(err => {
-        console.log(err);
-      })
-      .finally(_ => {
-      // console.log(editors, 'ini editors finallyy');
-      setLoading(false)
-      }) 
+    dispatch(addEditorsAsync())
   }, [])
-
 
   return (
     <div>
