@@ -4,10 +4,10 @@ import FavouriteCard from '../components/FavouriteCard'
 import ClipLoader from "react-spinners/ClipLoader"
 
 export default function Favourites() {
+  const favourites = useSelector(state => state.favourites.data)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
 
-  const favourites = useSelector(state => state.favourites)
   useEffect(() => {
     console.log(favourites, 'fav');
   }, [favourites])
@@ -24,14 +24,10 @@ export default function Favourites() {
         {/* card */}
         {
           favourites.map(favourite => {
-
             return <FavouriteCard favourite={favourite} key={favourite.url}></FavouriteCard>
           })
         }
         {/* card */}
-
-
-        
       </div>
     </div>
   )

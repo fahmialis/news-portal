@@ -8,7 +8,7 @@
 //     return {type: 'editors/addEditors', payload}
 // }
 
-export function addFavourites (payload) {
-    // console.log(payload, 'fav di action');
-    return {type: 'favourites/addFavourites', payload}
-}
+// export function addFavourites (payload) {
+//     // console.log(payload, 'fav di action');
+//     return {type: 'favourites/addFavourites', payload}
+// }

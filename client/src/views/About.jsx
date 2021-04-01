@@ -4,7 +4,7 @@ import {useSelector, useDispatch} from 'react-redux'
 import { addEditorsAsync } from '../store/actions/editors'
 
 function UserPage () {
-  const editors = useSelector(state => state.editors)
+  const editors = useSelector(state => state.editors.data)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const dispatch = useDispatch()

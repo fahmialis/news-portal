@@ -3,12 +3,12 @@ import React, { useState, useEffect } from 'react'
 export default function FavouriteCard(props) {
   const [favourite,setFavourite] = useState(props)
 
-  useEffect(() => {
-    console.log(favourite,'card fav')
-  }, [favourite])
+  // useEffect(() => {
+  //   console.log(favourite,'card fav')
+  // }, [favourite])
 
   return (
-    <div className="col-sm-6 col-lg-4 mb-3" style={{textAlign:'justify', width: 240}}>
+    <div className="col-sm-6 col-lg-4 mb-4" style={{textAlign:'justify', width: 240}}>
       <div className="card">
         <img className="card-img-top" src={favourite.favourite.news.urlToImage} alt="News image"/>
           <div className="card-body">
