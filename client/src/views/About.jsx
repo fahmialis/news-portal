@@ -2,11 +2,12 @@ import React, {useState, useEffect} from 'react'
 import UserCard from '../components/UserCard'
 import {useSelector, useDispatch} from 'react-redux'
 import { addEditorsAsync } from '../store/actions/editors'
+import ClipLoader from "react-spinners/ClipLoader"
 
 function UserPage () {
   const editors = useSelector(state => state.editors.data)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
+  const loading = useSelector(state => state.editors.loading)
+
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -32,6 +33,7 @@ function UserPage () {
         </thead>
         <tbody>
           {
+            loading ? <ClipLoader/> :
             editors.map(editor =>{
               return <UserCard editor={editor} key={editor.id}></UserCard>
             })

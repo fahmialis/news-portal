@@ -7,17 +7,14 @@ import { addNewsAsync } from '../store/actions/news'
 
 export default function Home() {
   const news = useSelector(state => state.news.data)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
+  const loading = useSelector(state => state.news.loading)
+
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(addNewsAsync())
   }, [])
 
-  if(error) {
-    return <h2>error</h2>
-  }
 
   return (
     <div>

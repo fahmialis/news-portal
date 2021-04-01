@@ -8,9 +8,9 @@ export default function Favourites() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
 
-  useEffect(() => {
-    console.log(favourites, 'fav');
-  }, [favourites])
+  // useEffect(() => {
+  //   console.log(favourites, 'fav');
+  // }, [favourites])
 
   return (
     <div className="mt-5">
