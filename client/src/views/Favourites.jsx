@@ -5,8 +5,7 @@ import ClipLoader from "react-spinners/ClipLoader"
 
 export default function Favourites() {
   const favourites = useSelector(state => state.favourites.data)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
+  const loading = useSelector(state => state.favourites.loading)
 
   // useEffect(() => {
   //   console.log(favourites, 'fav');
@@ -23,6 +22,7 @@ export default function Favourites() {
       <div class="row justify-content-center" style={{margin: 0}}>
         {/* card */}
         {
+          loading ? <ClipLoader/> :
           favourites.map(favourite => {
             return <FavouriteCard favourite={favourite} key={favourite.url}></FavouriteCard>
           })

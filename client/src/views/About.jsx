@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useEffect } from 'react'
 import UserCard from '../components/UserCard'
 import {useSelector, useDispatch} from 'react-redux'
 import { addEditorsAsync } from '../store/actions/editors'
