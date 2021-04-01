@@ -32,37 +32,40 @@ export default function Home() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://images.wsj.net/im-317682/social"
+            src="https://www.devdiscourse.com/remote.axd?https://devdiscourse.blob.core.windows.net/devnews/10_02_2020_15_57_03_6766537.jpg?width=920&format=jpeg"
             alt="First slide"
+            style={{height: 550}}
           />
           <Carousel.Caption style={{backgroundColor: 'black'}}>
-            <h3>WSJ News Exclusive | Florida Investor Commits $100 Million Toward Potential Bid for Tribune Publishing</h3>
-            <p>A Florida investor has expressed interest in joining an 11th-hour effort by a Maryland hotel magnate to acquire Tribune Publishing Co. and wrest the company away from hedge fund Alden Global Capital, LLC.(wsj.com)</p>
-            <a href="https://www.wsj.com/articles/florida-investor-commits-100-million-toward-potential-bid-for-tribune-publishing-11617035755" className="card-link"><h6 >Read more...</h6></a>
+            <h3>Global chip supply chain increasingly vulnerable to massive disruption, study finds</h3>
+            <p>But the Semiconductor Industry Association, representing most U.S. chipmakers, on Thursday said it found more than 50 places in the supply chain where a single region has more than 65% market share...</p>
+            <a href="https://www.devdiscourse.com/article/headlines/1518339-global-chip-supply-chain-increasingly-vulnerable-to-massive-disruption-study-finds" className="card-link"><h6 >Read more...</h6></a>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://images.wsj.net/im-317741/social"
+            src="https://static3.srcdn.com/wordpress/wp-content/uploads/2021/03/Shazam-possible-Mandela-effect-scene.jpg"
             alt="Second slide"
+            style={{height: 550}}
           />
           <Carousel.Caption style={{backgroundColor: 'black'}}>
-            <h3>Pair of Covid-19 Drugs Performed Well in Studies, Makers Say</h3>
-            <p>Showing promise were an experimental therapy from Humanigen and a drug cocktail being developed by Eli Lilly, GlaxoSmithKline and Vir</p>
-            <a href="https://www.wsj.com/articles/pair-of-covid-19-drugs-performed-well-in-studies-makers-say-11617034810" className="card-link"><h6>Read more...</h6></a>
+            <h3>Shazam Director Points Out Bizarre Mandela Effect In DC Movie</h3>
+            <p>A new example of the Mandela effect appears to have popped up with the DC film Shazam, as some fans claim to have seen a different end-credits scene.</p>
+            <a href="https://screenrant.com/shazam-throne-room-scene-deleted-director-response-debunked/" className="card-link"><h6>Read more...</h6></a>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://images.wsj.net/im-317758/social"
+            src="https://vmcdn.ca/f/files/shared/site_images/national_business_2017.jpg"
             alt="Third slide"
+            style={{height: 550}}
           />
           <Carousel.Caption style={{backgroundColor: 'black'}}>
-            <h3>Pfizer, Moderna Covid-19 Vaccines Effective in Real World, CDC Says</h3>
-            <p>The vaccines were 90% effective reducing the risk of infection in one of the first studies to look at real-world use in the U.S.</p>
-            <a href="https://www.wsj.com/articles/pfizer-moderna-covid-19-vaccines-effective-in-real-world-cdc-says-11617038463" className="card-link"><h6>Read more...</h6></a>
+            <h3>Newsmax keeps most, not all, of post-election samplers</h3>
+            <p>NEW YORK — The trajectory of the conservative network Newsmax is a clear example of how statistics can tell different stories, depending on how you look at them.</p>
+            <a href="https://www.vancouverisawesome.com/national-business/newsmax-keeps-most-not-all-of-post-election-samplers-3591994" className="card-link"><h6>Read more...</h6></a>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

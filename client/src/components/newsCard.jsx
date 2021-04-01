@@ -18,16 +18,16 @@ export default function newsCard({news}) {
       // console.log(news.url, favourite.url)
       return favourite.url === news.url})
     if(!isAdded) {
-      console.log(news, 'masuk')
+      // console.log(news, 'masuk')
       dispatch(addFavourites(news))
     } else if (isAdded) {
-      console.log(news, 'udah ada')
+      // console.log(news, 'udah ada')
     }
   }
 
   return (
     <div className="card mb-3" style={{width: "20rem", color: "black", textAlign: 'justify'}}>
-      <img className="card-img-top" src={news.urlToImage} alt="News image"/>
+      <img className="card-img-top" src={news.image} alt="News image"/>
       <div className="card-body">
         <h6 className="card-title" style={{fontSize: 12}}>{news.title}</h6>
         <h6 className="card-subtitle mb-2 text-muted" style={{fontSize: 12}}>{news.description}</h6>

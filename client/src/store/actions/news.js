@@ -17,7 +17,7 @@ export function setError(payload) {
 export function addNewsAsync() {
   return (dispatch) => {
     dispatch(setLoadingTrue())
-    fetch('https://newsapi.org/v2/everything?domains=wsj.com&apiKey=1a59ee3dcc8843718c9f4b3226d9f95e')
+    fetch('https://gnews.io/api/v4/top-headlines?token=cfc0741b8b7ba3520304439723731cd2')
     .then(res => res.json())
     .then(data => {
       // console.log(data,'acton');
