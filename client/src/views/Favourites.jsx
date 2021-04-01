@@ -23,8 +23,8 @@ export default function Favourites() {
         {/* card */}
         {
           loading ? <ClipLoader/> :
-          favourites.map(favourite => {
-            return <FavouriteCard favourite={favourite} key={favourite.url}></FavouriteCard>
+          favourites.map((favourite, index) => {
+            return <FavouriteCard favourite={favourite} key={index}></FavouriteCard>
           })
         }
         {/* card */}

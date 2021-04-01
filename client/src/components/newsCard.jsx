@@ -9,11 +9,12 @@ export default function newsCard(props) {
   const dispatch = useDispatch()
 
   // useEffect(() => {
-  //   console.log(news, 'ini news');
-  // },[])
+  //   console.log(favourites, 'favvvv');
+  // },[dispatch])
 
   const addToFavorite = (data) => {
-    const isAdded = favourites.find((favourite) => favourite.publishedAt === data.publishedAt)
+    const isAdded = favourites.find((favourite) => favourite.news.publishedAt === data.publishedAt)
+    console.log(data);
     if(!isAdded) {
       console.log(data);
       dispatch(addFavouritesAsync(data))
