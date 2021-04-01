@@ -1,14 +1,26 @@
 import React, {useState, useEffect} from 'react'
 import {Button} from 'react-bootstrap'
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import {addFavouritesAsync} from '../store/actions/favourites'
 
 export default function newsCard(props) {
   const [news,setNews] = useState(props)
+  const favourites = useSelector(state => state.favourites.data)
   const dispatch = useDispatch()
 
+  // useEffect(() => {
+  //   console.log(news, 'ini news');
+  // },[])
+
   const addToFavorite = (data) => {
-    dispatch(addFavouritesAsync(data))
+    const isAdded = favourites.find((favourite) => favourite.publishedAt === data.publishedAt)
+    if(!isAdded) {
+      console.log(data);
+      dispatch(addFavouritesAsync(data))
+    } else if (isAdded) {
+      console.log(data);
+      console.log('udah ada');
+    }
   }
 
   return (

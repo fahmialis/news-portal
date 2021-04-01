@@ -19,7 +19,7 @@ export default function Favourites() {
           <h2 className="lead">You can continue reading your favourite news from here</h2> 
       </div>
       <br/><br/>
-      <div class="row justify-content-center" style={{margin: 0}}>
+      <div className="row justify-content-center" style={{margin: 0}}>
         {/* card */}
         {
           loading ? <ClipLoader/> :
