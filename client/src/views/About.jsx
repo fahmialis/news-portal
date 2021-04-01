@@ -14,6 +14,9 @@ function UserPage () {
     dispatch(addEditorsAsync())
   }, [])
 
+  if(loading) {
+    return <ClipLoader></ClipLoader>
+  }
   return (
     <div>
       <br/>
@@ -33,7 +36,7 @@ function UserPage () {
         </thead>
         <tbody>
           {
-            loading ? <ClipLoader/> :
+            // loading ? <ClipLoader/> :
             editors.map(editor =>{
               return <UserCard editor={editor} key={editor.id}></UserCard>
             })

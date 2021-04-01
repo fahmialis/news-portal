@@ -10,6 +10,10 @@ export function setLoadingFalse() {
   return {type : 'news/setLoadingFalse'}
 }
 
+export function setError(payload) {
+  return {type: 'news/setError', payload}
+}
+
 export function addNewsAsync() {
   return (dispatch) => {
     dispatch(setLoadingTrue())
@@ -20,5 +24,9 @@ export function addNewsAsync() {
       dispatch(addNews(data))
       dispatch(setLoadingFalse())
     })
+    .catch(err => {
+      dispatch(setError(err))
+    })
+
   }
 }

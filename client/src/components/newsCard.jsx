@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import {Button} from 'react-bootstrap'
 import {useDispatch, useSelector} from 'react-redux'
-import {addFavouritesAsync} from '../store/actions/favourites'
+import {addFavourites} from '../store/actions/favourites'
 
-export default function newsCard(props) {
-  const [news,setNews] = useState(props)
+
+export default function newsCard({news}) {
+  // const [news,setNews] = useState(props)
   const favourites = useSelector(state => state.favourites.data)
   const dispatch = useDispatch()
 
@@ -12,29 +13,29 @@ export default function newsCard(props) {
   //   console.log(favourites, 'favvvv');
   // },[dispatch])
 
-  const addToFavorite = (data) => {
-    const isAdded = favourites.find((favourite) => favourite.news.publishedAt === data.publishedAt)
-    console.log(data);
+  const addToFavorite = () => {
+    const isAdded = favourites.find((favourite) => {
+      // console.log(news.url, favourite.url)
+      return favourite.url === news.url})
     if(!isAdded) {
-      console.log(data);
-      dispatch(addFavouritesAsync(data))
+      console.log(news, 'masuk')
+      dispatch(addFavourites(news))
     } else if (isAdded) {
-      console.log(data);
-      console.log('udah ada');
+      console.log(news, 'udah ada')
     }
   }
 
   return (
     <div className="card mb-3" style={{width: "20rem", color: "black", textAlign: 'justify'}}>
-      <img className="card-img-top" src={news.news.urlToImage} alt="News image"/>
+      <img className="card-img-top" src={news.urlToImage} alt="News image"/>
       <div className="card-body">
-        <h6 className="card-title" style={{fontSize: 12}}>{news.news.title}</h6>
-        <h6 className="card-subtitle mb-2 text-muted" style={{fontSize: 12}}>{news.news.description}</h6>
+        <h6 className="card-title" style={{fontSize: 12}}>{news.title}</h6>
+        <h6 className="card-subtitle mb-2 text-muted" style={{fontSize: 12}}>{news.description}</h6>
         <p className="card-text"></p>
         <div>
-        <a href={news.news.url} className="card-link"><h6 style={{fontSize: 12, textAlign: 'end'}}>Read more</h6></a>
+        <a href={news.url} className="card-link"><h6 style={{fontSize: 12, textAlign: 'end'}}>Read more</h6></a>
         <Button className="btn-sm" style={{fontSize: 12}} onClick={() => {
-          addToFavorite(news)
+          addToFavorite()
         }}>add to favorite</Button>
         </div>
       </div>

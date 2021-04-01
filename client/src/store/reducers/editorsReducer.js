@@ -12,6 +12,8 @@ function reducer(state = initialState, action){
     return {...state, loading: true}
   } else if (type === 'editors/setLoadingFalse'){
     return {...state, loading: false}
+  } else if (type === 'editors/setError'){
+    return {...state, error: payload}
   }
   return state
 }

@@ -7,9 +7,9 @@ export default function Favourites() {
   const favourites = useSelector(state => state.favourites.data)
   const loading = useSelector(state => state.favourites.loading)
 
-  // useEffect(() => {
-  //   console.log(favourites, 'fav');
-  // }, [favourites])
+  useEffect(() => {
+    console.log(favourites, 'fav');
+  }, [])
 
   return (
     <div className="mt-5">

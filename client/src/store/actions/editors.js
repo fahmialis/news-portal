@@ -10,6 +10,10 @@ export function setLoadingFalse() {
   return {type : 'editors/setLoadingFalse'}
 }
 
+export function setError(payload) {
+  return {type: 'editors/setError', payload}
+}
+
 export function addEditorsAsync() {
   return (dispatch) => {
     dispatch(setLoadingTrue())
@@ -18,6 +22,9 @@ export function addEditorsAsync() {
     .then(data => {
       dispatch(addEditors(data))
       dispatch(setLoadingFalse())
+    })
+    .catch(err => {
+      dispatch(setError(err))
     })
   };
 }
